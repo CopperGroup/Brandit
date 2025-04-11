@@ -306,30 +306,30 @@ const MyOrdersPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-center relative"
+          className="mb-8 md:mb-12 text-center relative px-4"
         >
           {/* Decorative elements */}
-          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-stone-100"></div>
-          <div className="absolute top-1/2 left-1/4 w-1/2 h-[1px] bg-olive-200/50"></div>
+          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-stone-100 hidden md:block"></div>
+          <div className="absolute top-1/2 left-1/4 w-1/2 h-[1px] bg-olive-200/50 hidden md:block"></div>
 
           {/* Tactical corner elements for title */}
-          <div className="absolute -top-6 left-1/4 w-8 h-8 border-t-2 border-l-2 border-olive-300/30"></div>
-          <div className="absolute -top-6 right-1/4 w-8 h-8 border-t-2 border-r-2 border-olive-300/30"></div>
-          <div className="absolute -bottom-6 left-1/4 w-8 h-8 border-b-2 border-l-2 border-olive-300/30"></div>
-          <div className="absolute -bottom-6 right-1/4 w-8 h-8 border-b-2 border-r-2 border-olive-300/30"></div>
+          <div className="absolute -top-6 left-1/4 w-8 h-8 border-t-2 border-l-2 border-olive-300/30 hidden md:block"></div>
+          <div className="absolute -top-6 right-1/4 w-8 h-8 border-t-2 border-r-2 border-olive-300/30 hidden md:block"></div>
+          <div className="absolute -bottom-6 left-1/4 w-8 h-8 border-b-2 border-l-2 border-olive-300/30 hidden md:block"></div>
+          <div className="absolute -bottom-6 right-1/4 w-8 h-8 border-b-2 border-r-2 border-olive-300/30 hidden md:block"></div>
 
-          <div className="relative inline-block px-10 py-2 bg-white">
-            <h1 className="font-belleza text-5xl tracking-wider text-stone-900 mb-4">МОЇ ЗАМОВЛЕННЯ</h1>
-            <div className="h-0.5 w-32 bg-olive-300 mx-auto"></div>
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-[1px] bg-olive-200"></div>
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-[1px] bg-olive-100"></div>
+          <div className="relative inline-block px-4 md:px-10 py-2 bg-white">
+            <h1 className="font-belleza text-3xl md:text-5xl tracking-wider text-stone-900 mb-4">МОЇ ЗАМОВЛЕННЯ</h1>
+            <div className="h-0.5 w-24 md:w-32 bg-olive-300 mx-auto"></div>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 md:w-16 h-[1px] bg-olive-200"></div>
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-[1px] bg-olive-100"></div>
           </div>
 
-          <p className="mt-8 text-stone-600 max-w-xl mx-auto relative">
-            <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 border-t border-l border-olive-300/50 rotate-45"></span>
+          <p className="mt-6 md:mt-8 text-stone-600 max-w-xl mx-auto relative px-4 text-sm md:text-base">
+            <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 border-t border-l border-olive-300/50 rotate-45 hidden md:block"></span>
             Відстежуйте статус ваших замовлень, переглядайте історію покупок та керуйте доставкою ваших тактичних
             товарів.
-            <span className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-2 h-2 border-b border-r border-olive-300/50 rotate-45"></span>
+            <span className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-2 h-2 border-b border-r border-olive-300/50 rotate-45 hidden md:block"></span>
           </p>
         </motion.div>
 
@@ -338,33 +338,33 @@ const MyOrdersPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-8 bg-white border border-stone-200 p-6 shadow-sm relative"
+          className="mb-8 bg-white border border-stone-200 p-4 md:p-6 shadow-sm relative overflow-hidden"
         >
           {/* Enhanced decorative corner elements */}
-          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-olive-300 pointer-events-none"></div>
-          <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-olive-300 pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-olive-300 pointer-events-none"></div>
-          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-olive-300 pointer-events-none"></div>
+          <div className="absolute top-0 left-0 w-6 md:w-8 h-6 md:h-8 border-t-2 border-l-2 border-olive-300 pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-6 md:w-8 h-6 md:h-8 border-t-2 border-r-2 border-olive-300 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-6 md:w-8 h-6 md:h-8 border-b-2 border-l-2 border-olive-300 pointer-events-none"></div>
+          <div className="absolute bottom-0 right-0 w-6 md:w-8 h-6 md:h-8 border-b-2 border-r-2 border-olive-300 pointer-events-none"></div>
           <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-olive-400/50 pointer-events-none"></div>
           <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-olive-400/50 pointer-events-none"></div>
           <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-olive-400/50 pointer-events-none"></div>
           <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-olive-400/50 pointer-events-none"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4">
             <div className="relative">
               <Input
                 placeholder="Пошук за номером замовлення або товаром"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 border-stone-200 focus:border-olive-400 focus:ring-olive-100 h-12"
+                className="pl-10 border-stone-200 focus:border-olive-400 focus:ring-olive-100 h-10 md:h-12"
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-400 w-4 md:w-5 h-4 md:h-5" />
             </div>
 
-            <div className="flex space-x-4">
-              <div className="relative flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="relative">
                 <Select value={statusFilter} onValueChange={setStatusFilter}>
-                  <SelectTrigger className="border-stone-200 focus:border-olive-400 focus:ring-olive-100 h-12 pl-10">
+                  <SelectTrigger className="border-stone-200 focus:border-olive-400 focus:ring-olive-100 h-10 md:h-12 pl-10">
                     <SelectValue placeholder="Статус замовлення" />
                   </SelectTrigger>
                   <SelectContent>
@@ -375,12 +375,12 @@ const MyOrdersPage = () => {
                     <SelectItem value="cancelled">Скасовано</SelectItem>
                   </SelectContent>
                 </Select>
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-400 w-5 h-5" />
+                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-400 w-4 md:w-5 h-4 md:h-5" />
               </div>
 
-              <div className="relative flex-1">
+              <div className="relative">
                 <Select value={sortBy} onValueChange={setSortBy}>
-                  <SelectTrigger className="border-stone-200 focus:border-olive-400 focus:ring-olive-100 h-12 pl-10">
+                  <SelectTrigger className="border-stone-200 focus:border-olive-400 focus:ring-olive-100 h-10 md:h-12 pl-10">
                     <SelectValue placeholder="Сортування" />
                   </SelectTrigger>
                   <SelectContent>
@@ -390,12 +390,12 @@ const MyOrdersPage = () => {
                     <SelectItem value="total_asc">За ціною (зростання)</SelectItem>
                   </SelectContent>
                 </Select>
-                <ArrowUpDown className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-400 w-5 h-5" />
+                <ArrowUpDown className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-400 w-4 md:w-5 h-4 md:h-5" />
               </div>
             </div>
 
             <div className="flex items-center justify-end space-x-2">
-              <div className="text-sm text-stone-500">
+              <div className="text-xs md:text-sm text-stone-500">
                 Знайдено замовлень: <span className="font-medium text-olive-700">{filteredOrders.length}</span>
               </div>
             </div>
@@ -535,53 +535,57 @@ const MyOrdersPage = () => {
                   </div>
 
                   {/* Order header */}
-                  <div className="p-6 flex flex-col md:flex-row md:items-center justify-between border-b border-stone-100 relative">
+                  <div className="p-4 md:p-6 flex flex-col md:flex-row md:items-center justify-between border-b border-stone-100 relative">
                     <div className="flex flex-col md:flex-row md:items-center gap-4">
                       <div className="flex items-center">
                         <div
-                          className={`w-10 h-10 rounded-full ${statusMap[order.status as keyof typeof statusMap].color} flex items-center justify-center mr-3`}
+                          className={`w-8 md:w-10 h-8 md:h-10 rounded-full ${statusMap[order.status as keyof typeof statusMap].color} flex items-center justify-center mr-3`}
                         >
                           {statusMap[order.status as keyof typeof statusMap].icon}
                         </div>
                         <div>
-                          <div className="flex items-center">
-                            <h3 className="font-belleza text-xl text-stone-800 mr-3">{order.id}</h3>
-                            <Badge className={`${statusMap[order.status as keyof typeof statusMap].color} border`}>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <h3 className="font-belleza text-lg md:text-xl text-stone-800">{order.id}</h3>
+                            <Badge
+                              className={`${statusMap[order.status as keyof typeof statusMap].color} border text-xs md:text-sm`}
+                            >
                               {statusMap[order.status as keyof typeof statusMap].label}
                             </Badge>
                           </div>
-                          <p className="text-stone-500 text-sm mt-1 flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
+                          <p className="text-stone-500 text-xs md:text-sm mt-1 flex items-center">
+                            <Calendar className="w-3 h-3 md:w-4 md:h-4 mr-1" />
                             {formatDate(order.date)}
                           </p>
                         </div>
                       </div>
 
-                      <div className="md:ml-6 mt-4 md:mt-0">
-                        <p className="text-stone-500 text-sm">
+                      <div className="md:ml-6 mt-3 md:mt-0">
+                        <p className="text-stone-500 text-xs md:text-sm">
                           Спосіб оплати: <span className="text-stone-700">{order.paymentMethod}</span>
                         </p>
-                        <p className="text-stone-500 text-sm">
+                        <p className="text-stone-500 text-xs md:text-sm">
                           Спосіб доставки: <span className="text-stone-700">{order.deliveryMethod}</span>
                         </p>
                       </div>
                     </div>
 
                     <div className="flex flex-col md:items-end mt-4 md:mt-0">
-                      <div className="font-belleza text-xl text-olive-700 mb-2">{order.total.toLocaleString()} ₴</div>
+                      <div className="font-belleza text-lg md:text-xl text-olive-700 mb-2">
+                        {order.total.toLocaleString()} ₴
+                      </div>
                       <Button
                         variant="outline"
                         size="sm"
-                        className="border-olive-300 text-olive-700 hover:bg-olive-50 hover:text-olive-800 hover:border-olive-400 font-medium"
+                        className="border-olive-300 text-olive-700 hover:bg-olive-50 hover:text-olive-800 hover:border-olive-400 font-medium text-xs md:text-sm"
                         onClick={() => toggleOrderExpansion(order.id)}
                       >
                         {expandedOrder === order.id ? (
                           <span className="flex items-center">
-                            Згорнути деталі <ChevronUp className="ml-1 w-4 h-4" />
+                            Згорнути деталі <ChevronUp className="ml-1 w-3 h-3 md:w-4 md:h-4" />
                           </span>
                         ) : (
                           <span className="flex items-center">
-                            Показати деталі <ChevronDown className="ml-1 w-4 h-4" />
+                            Показати деталі <ChevronDown className="ml-1 w-3 h-3 md:w-4 md:h-4" />
                           </span>
                         )}
                       </Button>
@@ -621,13 +625,13 @@ const MyOrdersPage = () => {
                             {order.items.map((item) => (
                               <div
                                 key={item.id}
-                                className="flex items-center p-3 bg-white border border-stone-200 rounded-md group hover:border-olive-300 transition-colors duration-300"
+                                className="flex items-center p-2 md:p-3 bg-white border border-stone-200 rounded-md group hover:border-olive-300 transition-colors duration-300"
                               >
-                                <div className="relative w-16 h-16 flex-shrink-0 overflow-hidden mr-4 bg-olive-50/40 border border-olive-200/50 group-hover:border-olive-300/70 transition-colors duration-300">
-                                  <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-olive-300 z-10 pointer-events-none"></div>
-                                  <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-olive-300 z-10 pointer-events-none"></div>
-                                  <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-olive-300 z-10 pointer-events-none"></div>
-                                  <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-olive-300 z-10 pointer-events-none"></div>
+                                <div className="relative w-12 h-12 md:w-16 md:h-16 flex-shrink-0 overflow-hidden mr-3 md:mr-4 bg-olive-50/40 border border-olive-200/50 group-hover:border-olive-300/70 transition-colors duration-300">
+                                  <div className="absolute top-0 left-0 w-2 md:w-3 h-2 md:h-3 border-t border-l border-olive-300 z-10 pointer-events-none"></div>
+                                  <div className="absolute top-0 right-0 w-2 md:w-3 h-2 md:h-3 border-t border-r border-olive-300 z-10 pointer-events-none"></div>
+                                  <div className="absolute bottom-0 left-0 w-2 md:w-3 h-2 md:h-3 border-b border-l border-olive-300 z-10 pointer-events-none"></div>
+                                  <div className="absolute bottom-0 right-0 w-2 md:w-3 h-2 md:h-3 border-b border-r border-olive-300 z-10 pointer-events-none"></div>
                                   <Image
                                     src={item.image || "/placeholder.svg"}
                                     alt={item.name}
@@ -636,13 +640,15 @@ const MyOrdersPage = () => {
                                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                                   />
                                 </div>
-                                <div className="flex-grow">
-                                  <h5 className="font-medium text-stone-800 group-hover:text-olive-700 transition-colors duration-300">
+                                <div className="flex-grow min-w-0">
+                                  <h5 className="font-medium text-stone-800 group-hover:text-olive-700 transition-colors duration-300 text-sm md:text-base truncate">
                                     {item.name}
                                   </h5>
                                   <div className="flex justify-between items-center mt-1">
-                                    <p className="text-sm text-stone-500">Кількість: {item.quantity}</p>
-                                    <p className="font-medium text-olive-700">{item.price.toLocaleString()} ₴</p>
+                                    <p className="text-xs md:text-sm text-stone-500">Кількість: {item.quantity}</p>
+                                    <p className="font-medium text-olive-700 text-xs md:text-sm">
+                                      {item.price.toLocaleString()} ₴
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -650,30 +656,34 @@ const MyOrdersPage = () => {
                           </div>
                         </div>
 
-                        <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="p-4 md:p-6 grid grid-cols-1 gap-4 md:gap-6">
                           <div>
-                            <h4 className="font-belleza text-lg text-stone-800 mb-4 flex items-center">
-                              <Truck className="w-5 h-5 mr-2 text-olive-600" />
+                            <h4 className="font-belleza text-base md:text-lg text-stone-800 mb-3 md:mb-4 flex items-center">
+                              <Truck className="w-4 h-4 md:w-5 md:h-5 mr-2 text-olive-600" />
                               ІНФОРМАЦІЯ ПРО ДОСТАВКУ
                             </h4>
-                            <Card className="p-4 border-stone-200 bg-white">
-                              <div className="space-y-3">
+                            <Card className="p-3 md:p-4 border-stone-200 bg-white">
+                              <div className="space-y-2 md:space-y-3">
                                 <div>
-                                  <p className="text-sm text-stone-500">Спосіб доставки:</p>
-                                  <p className="font-medium text-stone-800">{order.deliveryMethod}</p>
+                                  <p className="text-xs md:text-sm text-stone-500">Спосіб доставки:</p>
+                                  <p className="font-medium text-stone-800 text-sm md:text-base">
+                                    {order.deliveryMethod}
+                                  </p>
                                 </div>
 
                                 {order.trackingNumber && (
                                   <div>
-                                    <p className="text-sm text-stone-500">Номер відстеження:</p>
-                                    <div className="flex items-center">
-                                      <p className="font-medium text-olive-700 mr-2">{order.trackingNumber}</p>
+                                    <p className="text-xs md:text-sm text-stone-500">Номер відстеження:</p>
+                                    <div className="flex items-center flex-wrap gap-2">
+                                      <p className="font-medium text-olive-700 text-sm md:text-base">
+                                        {order.trackingNumber}
+                                      </p>
                                       <Button
                                         variant="ghost"
                                         size="sm"
-                                        className="h-8 px-2 text-olive-600 hover:text-olive-700 hover:bg-olive-50"
+                                        className="h-7 md:h-8 px-2 text-olive-600 hover:text-olive-700 hover:bg-olive-50 text-xs md:text-sm"
                                       >
-                                        <Eye className="w-4 h-4 mr-1" />
+                                        <Eye className="w-3 h-3 md:w-4 md:h-4 mr-1" />
                                         Відстежити
                                       </Button>
                                     </div>
@@ -681,10 +691,10 @@ const MyOrdersPage = () => {
                                 )}
 
                                 <div>
-                                  <p className="text-sm text-stone-500">Статус доставки:</p>
+                                  <p className="text-xs md:text-sm text-stone-500">Статус доставки:</p>
                                   <div className="flex items-center mt-1">
                                     <div
-                                      className={`w-4 h-4 rounded-full ${
+                                      className={`w-3 h-3 md:w-4 md:h-4 rounded-full ${
                                         order.status === "delivered"
                                           ? "bg-olive-500"
                                           : order.status === "in_transit"
@@ -694,7 +704,7 @@ const MyOrdersPage = () => {
                                               : "bg-stone-500"
                                       } mr-2`}
                                     ></div>
-                                    <p className="font-medium text-stone-800">
+                                    <p className="font-medium text-stone-800 text-sm md:text-base">
                                       {statusMap[order.status as keyof typeof statusMap].label}
                                     </p>
                                   </div>
@@ -704,37 +714,39 @@ const MyOrdersPage = () => {
                           </div>
 
                           <div>
-                            <h4 className="font-belleza text-lg text-stone-800 mb-4 flex items-center">
-                              <ShieldCheck className="w-5 h-5 mr-2 text-olive-600" />
+                            <h4 className="font-belleza text-base md:text-lg text-stone-800 mb-3 md:mb-4 flex items-center">
+                              <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 mr-2 text-olive-600" />
                               ДЕТАЛІ ЗАМОВЛЕННЯ
                             </h4>
 
-                            <Card className="p-4 border-stone-200 bg-white">
-                              <div className="space-y-3">
+                            <Card className="p-3 md:p-4 border-stone-200 bg-white">
+                              <div className="space-y-2 md:space-y-3">
                                 <div className="flex justify-between">
-                                  <p className="text-stone-500">Вартість товарів:</p>
-                                  <p className="font-medium text-stone-800">{order.total.toLocaleString()} ₴</p>
+                                  <p className="text-xs md:text-sm text-stone-500">Вартість товарів:</p>
+                                  <p className="font-medium text-stone-800 text-sm md:text-base">
+                                    {order.total.toLocaleString()} ₴
+                                  </p>
                                 </div>
                                 <div className="flex justify-between">
-                                  <p className="text-stone-500">Доставка:</p>
-                                  <p className="font-medium text-olive-600">Безкоштовно</p>
+                                  <p className="text-xs md:text-sm text-stone-500">Доставка:</p>
+                                  <p className="font-medium text-olive-600 text-sm md:text-base">Безкоштовно</p>
                                 </div>
                                 <Separator className="my-2 bg-stone-200" />
                                 <div className="flex justify-between">
-                                  <p className="font-belleza text-stone-800">ЗАГАЛЬНА СУМА:</p>
-                                  <p className="font-belleza text-xl text-olive-700">
+                                  <p className="font-belleza text-sm md:text-base text-stone-800">ЗАГАЛЬНА СУМА:</p>
+                                  <p className="font-belleza text-base md:text-xl text-olive-700">
                                     {order.total.toLocaleString()} ₴
                                   </p>
                                 </div>
                               </div>
 
-                              <div className="mt-4 pt-4 border-t border-stone-100">
+                              <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-stone-100">
                                 <Button
                                   variant="outline"
                                   size="sm"
-                                  className="w-full border-olive-300 text-olive-700 hover:bg-olive-50 hover:text-olive-800 hover:border-olive-400 font-medium"
+                                  className="w-full border-olive-300 text-olive-700 hover:bg-olive-50 hover:text-olive-800 hover:border-olive-400 font-medium text-xs md:text-sm py-1 md:py-2"
                                 >
-                                  <Download className="w-4 h-4 mr-2" />
+                                  <Download className="w-3 h-3 md:w-4 md:h-4 mr-2" />
                                   Завантажити чек
                                 </Button>
                               </div>
@@ -755,7 +767,7 @@ const MyOrdersPage = () => {
                                 <div className="absolute -left-[25px] w-12 h-12 rounded-full bg-olive-100 border-4 border-white flex items-center justify-center">
                                   <CheckCircle className="w-6 h-6 text-olive-600" />
                                 </div>
-                                <div className="ml-8">
+                                <div className="ml-4">
                                   <p className="font-medium text-stone-800">Замовлення доставлено</p>
                                   <p className="text-sm text-stone-500">
                                     {formatDate(
@@ -771,7 +783,7 @@ const MyOrdersPage = () => {
                                 <div className="absolute -left-[25px] w-12 h-12 rounded-full bg-blue-100 border-4 border-white flex items-center justify-center">
                                   <Truck className="w-6 h-6 text-blue-600" />
                                 </div>
-                                <div className="ml-8">
+                                <div className="ml-4">
                                   <p className="font-medium text-stone-800">Замовлення в дорозі</p>
                                   <p className="text-sm text-stone-500">
                                     {formatDate(
@@ -789,7 +801,7 @@ const MyOrdersPage = () => {
                                 <div className="absolute -left-[25px] w-12 h-12 rounded-full bg-amber-100 border-4 border-white flex items-center justify-center">
                                   <Package className="w-6 h-6 text-amber-600" />
                                 </div>
-                                <div className="ml-8">
+                                <div className="ml-4">
                                   <p className="font-medium text-stone-800">Замовлення в обробці</p>
                                   <p className="text-sm text-stone-500">
                                     {formatDate(
@@ -804,7 +816,7 @@ const MyOrdersPage = () => {
                               <div className="absolute -left-[25px] w-12 h-12 rounded-full bg-stone-100 border-4 border-white flex items-center justify-center">
                                 <ShoppingCart className="w-6 h-6 text-stone-600" />
                               </div>
-                              <div className="ml-8">
+                              <div className="ml-4">
                                 <p className="font-medium text-stone-800">Замовлення створено</p>
                                 <p className="text-sm text-stone-500">{formatDate(order.date)}</p>
                               </div>
@@ -815,7 +827,7 @@ const MyOrdersPage = () => {
                                 <div className="absolute -left-[25px] w-12 h-12 rounded-full bg-stone-100 border-4 border-white flex items-center justify-center">
                                   <XCircle className="w-6 h-6 text-stone-600" />
                                 </div>
-                                <div className="ml-8">
+                                <div className="ml-4">
                                   <p className="font-medium text-stone-800">Замовлення скасовано</p>
                                   <p className="text-sm text-stone-500">
                                     {formatDate(

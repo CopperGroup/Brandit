@@ -229,7 +229,7 @@ export default function Header({ currentUserId, role }: { currentUserId: string,
                       transition={{ delay: 0.1 }}
                     >
                       <Link
-                        href="/admin"
+                        href="/admin/dashboard"
                         className="flex items-center justify-between py-4 px-5 text-white/80 hover:text-white hover:bg-white/5 rounded-sm transition-all duration-300 group relative overflow-hidden"
                         onClick={() => setIsMenuOpen(false)}
                       >

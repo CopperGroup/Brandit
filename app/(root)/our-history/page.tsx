@@ -231,7 +231,7 @@ export default function OurHistoryPage() {
   const years = [...new Set(milestones.map((milestone) => milestone.year))].sort()
 
   return (
-    <div className="bg-stone-950 min-h-screen overflow-hidden" ref={containerRef}>
+    <main className="bg-stone-950 min-h-screen overflow-hidden" ref={containerRef}>
       {/* Enhanced Hero Section with Parallax and Tactical Elements */}
       <section className="relative h-[70vh] overflow-hidden">
         {/* Background image with enhanced parallax effect */}
@@ -262,7 +262,7 @@ export default function OurHistoryPage() {
           />
 
           {/* Tactical coordinates and markings */}
-          <div className="absolute top-6 right-6 text-white/30 text-xs font-mono">N 50°27&apos;12&quot; E 30°31&apos;24&quot;</div>
+          <div className="absolute top-6 right-6 text-white/30 text-xs font-mono">N 50°27&apos;12&qout; E 30°31&apos;24&qout;</div>
           <div className="absolute bottom-6 left-6 text-white/30 text-xs font-mono">GRID 38TUL8891307610</div>
 
           {/* Animated tactical elements */}
@@ -285,7 +285,7 @@ export default function OurHistoryPage() {
         <div className="absolute bottom-8 right-8 w-32 h-32 border-b border-r border-white/20"></div>
 
         {/* Content with enhanced animations */}
-        <div className="container mx-auto px-4 h-full relative z-10 flex flex-col justify-center items-center pb-24">
+        <div className="container mx-auto px-4 h-full relative z-10 flex flex-col justify-center items-center pb-16 sm:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -308,7 +308,7 @@ export default function OurHistoryPage() {
               ></motion.div>
             </div>
 
-            <h1 className="font-belleza text-5xl md:text-7xl text-white mb-8 tracking-wide relative">
+            <h1 className="font-belleza text-4xl sm:text-5xl md:text-7xl text-white mb-8 tracking-wide relative">
               <span className="relative inline-block">
                 ІСТОРІЯ {Store.name}
                 <motion.span
@@ -330,7 +330,7 @@ export default function OurHistoryPage() {
               заснування до глобального визнання — кожен крок нашої місії.
             </motion.p>
 
-            <div className="flex items-center justify-center text-white/80 text-sm">
+            <div className="flex items-center justify-center text-white/80 text-sm max-sm:-mt-8">
               <Link href="/" className="hover:text-white transition-colors">
                 Головна
               </Link>
@@ -341,8 +341,8 @@ export default function OurHistoryPage() {
         </div>
 
         {/* View mode selector */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
-          <div className="flex bg-stone-900/80 backdrop-blur-sm border border-stone-700/50 p-1 rounded-sm">
+        <div className="absolute bottom-1 sm:bottom-12 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-md">
+          <div className="flex flex-wrap justify-center bg-stone-900/80 backdrop-blur-sm border border-stone-700/50 p-1 rounded-sm">
             <button
               onClick={() => setViewMode("timeline")}
               className={`px-4 py-2 text-sm font-belleza ${viewMode === "timeline" ? "bg-olive-700 text-white" : "text-stone-300 hover:text-white"} transition-colors`}
@@ -387,10 +387,10 @@ export default function OurHistoryPage() {
             transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
           />
 
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-3 sm:px-4 relative z-10">
             {/* Year selector */}
-            <div className="flex justify-center mb-16">
-              <div className="flex bg-stone-900/80 backdrop-blur-sm border border-stone-700/50 p-2 relative">
+            <div className="flex justify-center mb-16 overflow-x-auto pb-2">
+              <div className="flex flex-nowrap bg-stone-900/80 backdrop-blur-sm border border-stone-700/50 p-2 relative">
                 <div className="absolute -top-3 -left-3 w-6 h-6 border-t border-l border-olive-700/40"></div>
                 <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b border-r border-olive-700/40"></div>
 
@@ -443,7 +443,8 @@ export default function OurHistoryPage() {
             {/* Timeline visualization */}
             <div className="relative max-w-6xl mx-auto">
               {/* Central timeline line */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-stone-700"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-stone-700 hidden md:block"></div>
+              <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-stone-700 md:hidden"></div>
 
               {/* Timeline nodes */}
               {filteredMilestones.map((milestone, index) => (
@@ -453,16 +454,16 @@ export default function OurHistoryPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`flex items-center mb-32 ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                  className={`flex flex-col md:flex-row items-center mb-16 md:mb-32 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
                 >
                   {/* Timeline node */}
-                  <div className="w-1/2 flex justify-center">
+                  <div className="w-full md:w-1/2 flex justify-center">
                     <div
-                      className={`relative p-6 border ${
+                      className={`relative p-4 sm:p-6 border ${
                         milestone.classified
                           ? "border-amber-700/50 bg-stone-900/80"
                           : "border-stone-700/50 bg-stone-900/50"
-                      } backdrop-blur-sm max-w-lg`}
+                      } backdrop-blur-sm max-w-lg w-full`}
                     >
                       {/* Corner accents */}
                       <div className="absolute -top-2 -left-2 w-4 h-4 border-t border-l border-olive-700/40"></div>
@@ -524,7 +525,7 @@ export default function OurHistoryPage() {
                             className="overflow-hidden"
                           >
                             <div className="pt-6 mt-6 border-t border-stone-700">
-                              {/* <div className="aspect-video relative overflow-hidden mb-6">
+                              <div className="aspect-video relative overflow-hidden mb-6">
                                 <Image
                                   src={milestone.image || "/placeholder.svg"}
                                   alt={milestone.title}
@@ -532,12 +533,12 @@ export default function OurHistoryPage() {
                                   className="object-cover"
                                 />
 
-                                Image overlay
+                                {/* Image overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/30 to-transparent"></div>
 
-                                Tactical overlay
+                                {/* Tactical overlay */}
                                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"></div>
-                              </div> */}
+                              </div>
 
                               <div className="space-y-4">
                                 <div className="flex items-start gap-3">
@@ -581,17 +582,17 @@ export default function OurHistoryPage() {
                   </div>
 
                   {/* Timeline connector */}
-                  <div className="w-0 relative">
+                  <div className="w-0 relative my-4 md:my-0">
                     <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-olive-700 border-2 border-stone-900 z-10"></div>
                     <div
-                      className={`absolute top-1/2 -translate-y-1/2 ${
+                      className={`hidden md:block absolute top-1/2 -translate-y-1/2 ${
                         index % 2 === 0 ? "left-0" : "right-0"
                       } w-10 h-[1px] bg-olive-500`}
                     ></div>
                   </div>
 
                   {/* Empty space for alternating layout */}
-                  <div className="w-1/2"></div>
+                  <div className="hidden md:block md:w-1/2"></div>
                 </motion.div>
               ))}
             </div>
@@ -618,7 +619,7 @@ export default function OurHistoryPage() {
           {/* Tactical grid overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] opacity-30 -z-10"></div>
 
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-3 sm:px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="mb-12 text-center">
                 <h2 className="font-belleza text-4xl text-white mb-6">ГЕОГРАФІЯ РОЗВИТКУ</h2>
@@ -694,7 +695,7 @@ export default function OurHistoryPage() {
               </div>
 
               {/* Location list */}
-              <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {[
                   { name: "Київ, Україна", desc: "Місце заснування бренду та головний офіс", events: 6 },
                   { name: "Львів, Україна", desc: "Виробничий центр та дослідницька база", events: 2 },
@@ -745,7 +746,7 @@ export default function OurHistoryPage() {
             }}
           ></div>
 
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-3 sm:px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="mb-16 text-center">
                 <div className="inline-block mb-6 relative">
@@ -832,7 +833,7 @@ export default function OurHistoryPage() {
                                     ? "Розробка унікальної концепції бренду, що поєднує військову естетику з міською елегантністю."
                                     : i === 1
                                       ? "Впровадження інноваційних технологій у виробництво повсякденного одягу."
-                                      : `Створення впізнаваного стилю, що став візитною карткою бренду ${Store.name}.`}
+                                      : "Створення впізнаваного стилю, що став візитною карткою бренду {Store.name}."}
                                 </span>
                               </li>
                             ))}
@@ -909,7 +910,7 @@ export default function OurHistoryPage() {
         {/* Tactical grid overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] opacity-30 -z-10"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-3 sm:px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -930,7 +931,7 @@ export default function OurHistoryPage() {
                 естетику в повсякденному одязі.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
                 <Link href="/catalog">
                   <Button className="bg-olive-700 hover:bg-olive-600 text-white rounded-none py-5 px-10 font-belleza tracking-wider group overflow-hidden relative min-w-[200px]">
                     <span className="relative z-10 flex items-center justify-center gap-2">
@@ -960,7 +961,6 @@ export default function OurHistoryPage() {
           <span className="font-belleza text-stone-500 tracking-widest text-sm px-6">{Store.name} HERITAGE EST. 2023</span>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
-
