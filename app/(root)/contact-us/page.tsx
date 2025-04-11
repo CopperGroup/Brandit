@@ -135,7 +135,7 @@ export default function ContactUsPage() {
           </div>
 
           <h1 className="font-belleza text-5xl md:text-6xl lg:text-7xl text-white tracking-wide relative inline-block mb-8">
-            <span className="relative z-10">ЗВ'ЯЖІТЬСЯ З НАМИ</span>
+            <span className="relative z-10">ЗВ&apos;ЯЖІТЬСЯ З НАМИ</span>
             <motion.span
               className="absolute -bottom-3 left-0 right-0 h-[2px] bg-olive-500/30"
               initial={{ scaleX: 0 }}
@@ -146,7 +146,7 @@ export default function ContactUsPage() {
           </h1>
 
           <p className="max-w-2xl mx-auto text-stone-300 font-light">
-            Маєте запитання чи пропозиції? Заповніть форму нижче, і ми зв'яжемося з вами якнайшвидше.
+            Маєте запитання чи пропозиції? Заповніть форму нижче, і ми зв&apos;яжемося з вами якнайшвидше.
           </p>
         </motion.div>
 
@@ -266,7 +266,7 @@ export default function ContactUsPage() {
                     </div>
                     <h3 className="font-belleza text-3xl text-white mb-4">Повідомлення Відправлено!</h3>
                     <p className="text-stone-300 max-w-lg mx-auto mb-8">
-                      Дякуємо за ваше звернення. Ми розглянемо його та зв'яжемося з вами якнайшвидше.
+                      Дякуємо за ваше звернення. Ми розглянемо його та зв&apos;яжемося з вами якнайшвидше.
                     </p>
                     <Button
                       className="bg-olive-700 hover:bg-olive-600 text-white rounded-none py-5 px-10 font-belleza tracking-wider"
@@ -290,7 +290,7 @@ export default function ContactUsPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div className="space-y-2">
-                        <label className="text-stone-300 text-sm">Ім'я та Прізвище</label>
+                        <label className="text-stone-300 text-sm">Ім&apos;я та Прізвище</label>
                         <Input
                           className="bg-stone-800/80 border-stone-700 text-white placeholder:text-stone-400 rounded-none py-6 px-4 focus:border-olive-600"
                           placeholder="Введіть ваше повне ім'я"

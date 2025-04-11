@@ -1039,7 +1039,7 @@ export default function DeliveryPage() {
                   </div>
 
                   {/* Tactical coordinates */}
-                  <div className="absolute top-2 left-2 text-xs font-mono text-stone-500">N 48°00'00" E 31°00'00"</div>
+                  <div className="absolute top-2 left-2 text-xs font-mono text-stone-500">N 48°00&apos;00&quot; E 31°00&apos;00&quot;</div>
 
                   <div className="absolute bottom-2 right-2 text-xs font-mono text-stone-500">GRID: 36TUU00000000</div>
 
@@ -1215,13 +1215,13 @@ export default function DeliveryPage() {
                     <div className="flex-1">
                       <h3 className="font-belleza text-lg mb-1">Не знайшли відповідь на своє запитання?</h3>
                       <p className="text-stone-600 text-sm">
-                        Зв'яжіться з нашою службою підтримки, і ми з радістю допоможемо вам з будь-яким питанням щодо
+                        Зв&quot;яжіться з нашою службою підтримки, і ми з радістю допоможемо вам з будь-яким питанням щодо
                         доставки.
                       </p>
                     </div>
 
                     <Button className="bg-olive-800 hover:bg-olive-700 text-white rounded-sm whitespace-nowrap">
-                      ЗВОРОТНІЙ ЗВ'ЯЗОК
+                      ЗВОРОТНІЙ ЗВ&quot;ЯЗОК
                     </Button>
                   </div>
                 </motion.div>

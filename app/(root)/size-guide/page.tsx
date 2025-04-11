@@ -223,8 +223,8 @@ export default function SizeGuidePage() {
         ></div>
 
         {/* Military coordinates and markings */}
-        <div className="absolute top-[10%] right-[10%] text-olive-500/40 text-xs font-mono">N 50°27'12"</div>
-        <div className="absolute top-[12%] right-[10%] text-olive-500/40 text-xs font-mono">E 30°31'24"</div>
+        <div className="absolute top-[10%] right-[10%] text-olive-500/40 text-xs font-mono">N 50°27&apos;12&quot;</div>
+        <div className="absolute top-[12%] right-[10%] text-olive-500/40 text-xs font-mono">E 30°31&apos;24&quot;</div>
         <div className="absolute bottom-[10%] left-[10%] text-olive-500/40 text-xs font-mono">
           GRID 38TUL8891307610
         </div>
@@ -652,7 +652,7 @@ export default function SizeGuidePage() {
               />
             </div>
             <p className="max-w-2xl mx-auto text-stone-300">
-              Для оптимальної тактичної посадки дотримуйтесь цих точних інструкцій з вимірювання, використовуючи м'яку
+              Для оптимальної тактичної посадки дотримуйтесь цих точних інструкцій з вимірювання, використовуючи м&apos;яку
               вимірювальну стрічку.
             </p>
           </FadeInWhenVisible>
@@ -979,7 +979,7 @@ export default function SizeGuidePage() {
               href="/contact-us"
               className="inline-flex items-center gap-2 bg-olive-800 hover:bg-olive-700 text-white px-8 py-3 transition-colors duration-300 group relative overflow-hidden"
             >
-              <span className="relative z-10">ЗВ'ЯЗАТИСЯ З КОМАНДОЮ ПІДТРИМКИ</span>
+              <span className="relative z-10">ЗВ&apos;ЯЗАТИСЯ З КОМАНДОЮ ПІДТРИМКИ</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-olive-700 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
             </Link>

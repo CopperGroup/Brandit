@@ -173,8 +173,8 @@ export default function SizeGuide() {
       />
 
       {/* Military coordinates and markings */}
-      <div className="absolute top-[10%] right-[10%] text-olive-500/30 text-xs font-mono -z-10">N 50°27'12"</div>
-      <div className="absolute top-[12%] right-[10%] text-olive-500/30 text-xs font-mono -z-10">E 30°31'24"</div>
+      <div className="absolute top-[10%] right-[10%] text-olive-500/30 text-xs font-mono -z-10">N 50°27&apos;12&quot;</div>
+      <div className="absolute top-[12%] right-[10%] text-olive-500/30 text-xs font-mono -z-10">E 30°31&apos;24&quot;</div>
       <div className="absolute bottom-[10%] left-[10%] text-olive-500/30 text-xs font-mono -z-10">
         GRID 38TUL8891307610
       </div>
@@ -464,7 +464,7 @@ export default function SizeGuide() {
             <div>
               <h4 className="font-belleza text-base sm:text-lg mb-1 sm:mb-2 text-white">ЯК ВИМІРЯТИ</h4>
               <p className="text-stone-300 text-xs sm:text-sm leading-relaxed">
-                Для найточніших результатів, використовуйте м'яку вимірювальну стрічку. Стійте прямо і розслаблено.
+                Для найточніших результатів, використовуйте м&apos;яку вимірювальну стрічку. Стійте прямо і розслаблено.
                 Вимірювання грудей слід робити в найширшій частині, талії - в найвужчій частині, а стегон - в найширшій
                 частині нижче талії.
               </p>

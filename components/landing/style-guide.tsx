@@ -333,9 +333,9 @@ export default function StyleGuide() {
                 <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 border-b border-r border-olive-700/40"></div>
 
                 <p className="text-stone-700 mb-6 sm:mb-8 md:mb-10 italic leading-relaxed text-center font-light text-base sm:text-lg md:text-xl">
-                  "Ключ до носіння військового стилю в повсякденному житті —{" "}
+                &quot;Ключ до носіння військового стилю в повсякденному житті —{" "}
                   <span className="font-normal text-stone-900">баланс</span>. Поєднуйте один-два військові елементи з
-                  базовими речами, щоб створити гармонійний образ, який не виглядає як повна уніформа."
+                  базовими речами, щоб створити гармонійний образ, який не виглядає як повна уніформа.&quot;
                 </p>
 
                 <div className="text-center">

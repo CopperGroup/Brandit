@@ -187,8 +187,8 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
           </div>
 
           {/* Tactical coordinates */}
-          <div className="absolute top-4 left-4 text-olive-400/40 text-xs font-mono">N 50°27'18"</div>
-          <div className="absolute top-4 right-4 text-olive-400/40 text-xs font-mono">E 30°31'25"</div>
+          <div className="absolute top-4 left-4 text-olive-400/40 text-xs font-mono">N 50°27&apos;18&quot;</div>
+          <div className="absolute top-4 right-4 text-olive-400/40 text-xs font-mono">E 30°31&apos;25&quot;</div>
         </div>
 
         <div className="container max-w-7xl mx-auto px-4 h-full flex flex-col justify-center relative z-20">
@@ -206,7 +206,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
             </h1>
             <div className="h-0.5 w-32 bg-olive-300"></div>
             <p className="mt-4 text-stone-600 max-w-xl">
-              Заповніть форму нижче для оформлення вашого замовлення. Наші менеджери зв'яжуться з вами найближчим часом.
+              Заповніть форму нижче для оформлення вашого замовлення. Наші менеджери зв&apos;яжуться з вами найближчим часом.
             </p>
           </motion.div>
         </div>
@@ -536,7 +536,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
                               </div>
                               <div>
                                 <h3 className="font-belleza text-xl text-stone-800">ОСОБИСТІ ДАНІ</h3>
-                                <p className="text-stone-500 text-sm">Введіть ваші контактні дані для зв'язку</p>
+                                <p className="text-stone-500 text-sm">Введіть ваші контактні дані для зв&apos;язку</p>
                               </div>
                             </div>
 
@@ -761,7 +761,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
                                 <h3 className="font-belleza text-lg text-stone-800">БЕЗПЕЧНА ОПЛАТА</h3>
                               </div>
                               <p className="text-stone-600 text-sm">
-                                Всі платежі обробляються через захищені канали зв'язку. Ми не зберігаємо дані вашої
+                                Всі платежі обробляються через захищені канали зв&apos;язку. Ми не зберігаємо дані вашої
                                 картки та використовуємо найсучасніші методи шифрування для захисту ваших персональних
                                 даних.
                               </p>
@@ -810,12 +810,12 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
                               <h3 className="font-belleza text-lg text-stone-800 mb-4">ПІДТВЕРДЖЕННЯ ЗАМОВЛЕННЯ</h3>
                               <p className="text-stone-600 text-sm mb-4">
                                 Будь ласка, перевірте правильність введених даних перед підтвердженням замовлення. Після
-                                підтвердження наш менеджер зв'яжеться з вами для уточнення деталей.
+                                підтвердження наш менеджер зв&apos;яжеться з вами для уточнення деталей.
                               </p>
                               <div className="flex items-center">
                                 <CheckCircle className="w-5 h-5 text-olive-600 mr-2" />
                                 <p className="text-stone-700 text-sm font-medium">
-                                  Натискаючи кнопку "Підтвердити замовлення", ви погоджуєтесь з умовами доставки та
+                                  Натискаючи кнопку &quot;Підтвердити замовлення&quot;, ви погоджуєтесь з умовами доставки та
                                   оплати.
                                 </p>
                               </div>

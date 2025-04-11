@@ -489,7 +489,7 @@ export default function GuaranteesPage() {
               <Link href="/contact-us" className="relative group">
                 <div className="absolute inset-0 bg-olive-800 rounded-sm transform group-hover:translate-y-1 group-hover:translate-x-1 transition-transform duration-200"></div>
                 <div className="relative px-8 py-3 bg-stone-900 border border-olive-500/50 rounded-sm text-white font-medium group-hover:-translate-y-1 group-hover:-translate-x-1 transition-transform duration-200">
-                  Зв'язатися з нами
+                  Зв&apos;язатися з нами
                 </div>
               </Link>
 

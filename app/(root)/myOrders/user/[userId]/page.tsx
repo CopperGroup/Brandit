@@ -275,10 +275,10 @@ const MyOrdersPage = () => {
         <div className="absolute bottom-1/3 left-1/4 w-20 h-20 border border-olive-300/10"></div>
 
         {/* Tactical coordinates */}
-        <div className="absolute top-4 left-4 text-olive-400/20 text-xs font-mono">N 50°27'18"</div>
-        <div className="absolute top-4 right-4 text-olive-400/20 text-xs font-mono">E 30°31'25"</div>
-        <div className="absolute bottom-4 left-4 text-olive-400/20 text-xs font-mono">S 50°27'18"</div>
-        <div className="absolute bottom-4 right-4 text-olive-400/20 text-xs font-mono">W 30°31'25"</div>
+        <div className="absolute top-4 left-4 text-olive-400/20 text-xs font-mono">N 50°27&apos;18&quot;</div>
+        <div className="absolute top-4 right-4 text-olive-400/20 text-xs font-mono">E 30°31&apos;25&quot;</div>
+        <div className="absolute bottom-4 left-4 text-olive-400/20 text-xs font-mono">S 50°27&apos;18&quot;</div>
+        <div className="absolute bottom-4 right-4 text-olive-400/20 text-xs font-mono">W 30°31&apos;25&quot;</div>
       </div>
 
       {/* Enhanced tactical corner elements */}

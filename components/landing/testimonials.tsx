@@ -219,8 +219,8 @@ export default function Testimonials() {
 
                 <div className="p-12 flex flex-col items-center text-center relative">
                   {/* Decorative quote marks */}
-                  <div className="absolute top-6 left-6 text-4xl text-olive-700/20 font-serif">"</div>
-                  <div className="absolute bottom-6 right-6 text-4xl text-olive-700/20 font-serif">"</div>
+                  <div className="absolute top-6 left-6 text-4xl text-olive-700/20 font-serif">&quot;</div>
+                  <div className="absolute bottom-6 right-6 text-4xl text-olive-700/20 font-serif">&quot;</div>
 
                   <div className="mb-8 relative">
                     <div className="flex mb-2 justify-center">
@@ -259,7 +259,7 @@ export default function Testimonials() {
                   </div>
 
                   <p className="text-lg mb-8 text-stone-300 font-light italic leading-relaxed relative">
-                    "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                   </p>
 
                   <div className="mt-auto">

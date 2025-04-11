@@ -350,7 +350,7 @@ export default function OutfitBuilder() {
             viewport={{ once: true }}
           >
             <p className="text-stone-500 text-sm italic">
-              Натисніть "СТВОРИТИ НОВИЙ ОБРАЗ", щоб побачити інші стильні комбінації з нашої колекції
+              Натисніть &quot;СТВОРИТИ НОВИЙ ОБРАЗ&quot;, щоб побачити інші стильні комбінації з нашої колекції
             </p>
           </motion.div>
         </motion.div>

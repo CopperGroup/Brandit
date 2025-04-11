@@ -210,7 +210,7 @@ export default function FaqSection() {
             <p className="text-stone-700 mb-6">Не знайшли відповідь на своє запитання?</p>
             <Link href="/contact-us" scroll={true}>
               <Button className="bg-olive-700 hover:bg-olive-600 text-white rounded-none py-3 px-8 font-belleza tracking-wider group overflow-hidden relative">
-                <span className="relative z-10">ЗВ'ЯЗАТИСЯ З НАМИ</span>
+                <span className="relative z-10">ЗВ&apos;ЯЗАТИСЯ З НАМИ</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-olive-800 to-olive-700 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
               </Button>
             </Link>

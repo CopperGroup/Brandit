@@ -145,8 +145,8 @@ export default function VerifyEmailPage() {
           <div className="absolute bottom-8 left-8 w-20 h-20 border-b-2 border-l-2 border-olive-600/30 opacity-70"></div>
 
           {/* Tactical coordinates */}
-          <div className="absolute top-4 left-4 text-olive-500/40 text-xs font-mono">LAT: 50°27'N</div>
-          <div className="absolute top-4 right-4 text-olive-500/40 text-xs font-mono">LONG: 30°31'E</div>
+          <div className="absolute top-4 left-4 text-olive-500/40 text-xs font-mono">LAT: 50°27&apos;N</div>
+          <div className="absolute top-4 right-4 text-olive-500/40 text-xs font-mono">LONG: 30°31&apos;E</div>
           <div className="absolute bottom-4 left-4 text-olive-500/40 text-xs font-mono">SEC.LEVEL: ALPHA</div>
           <div className="absolute bottom-4 right-4 text-olive-500/40 text-xs font-mono">
             <motion.span

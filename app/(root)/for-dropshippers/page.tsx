@@ -317,7 +317,7 @@ export default function DropshipperPage() {
                   </div>
                   <h3 className="font-belleza text-3xl text-white mb-4">Заявку Відправлено!</h3>
                   <p className="text-stone-300 max-w-lg mx-auto mb-8">
-                    Дякуємо за інтерес до співпраці з {Store.name}. Ми розглянемо вашу заявку та зв'яжемося з вами протягом 2-3
+                    Дякуємо за інтерес до співпраці з {Store.name}. Ми розглянемо вашу заявку та зв&apos;яжемося з вами протягом 2-3
                     робочих днів.
                   </p>
                   <Button
@@ -343,7 +343,7 @@ export default function DropshipperPage() {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div className="space-y-2">
-                          <label className="text-stone-300 text-sm">Ім'я та Прізвище</label>
+                          <label className="text-stone-300 text-sm">Ім&apos;я та Прізвище</label>
                           <Input
                             className="bg-stone-800/80 border-stone-700 text-white placeholder:text-stone-400 rounded-none py-6 px-4 focus:border-olive-600"
                             placeholder="Введіть ваше повне ім'я"
@@ -672,7 +672,7 @@ export default function DropshipperPage() {
             viewport={{ once: true }}
             className="mt-24 text-center"
           >
-            <p className="text-stone-300 mb-6">Маєте додаткові запитання? Зв'яжіться з нашим відділом партнерства:</p>
+            <p className="text-stone-300 mb-6">Маєте додаткові запитання? Зв&apos;яжіться з нашим відділом партнерства:</p>
             <p className="text-white font-belleza text-xl">partners@{Store.name}.ua</p>
           </motion.div>
         </div>
