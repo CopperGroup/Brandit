@@ -546,7 +546,7 @@ export default function ProductPage({
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-olive-700 mt-2"></div>
-                      <span>Кур'єрська доставка по Києву: 1 робочий день (безкоштовно від 1500 ₴)</span>
+                      <span>Кур&apos;єрська доставка по Києву: 1 робочий день (безкоштовно від 1500 ₴)</span>
                     </li>
                   </ul>
                 </div>

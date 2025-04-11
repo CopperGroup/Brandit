@@ -35,7 +35,7 @@ export default function CatalogBanner() {
         />
 
         {/* Tactical coordinates and markings */}
-        <div className="absolute top-6 right-6 text-white/30 text-xs font-mono">N 50°27'12" E 30°31'24"</div>
+        <div className="absolute top-6 right-6 text-white/30 text-xs font-mono">N 50°27&apos;12&quot; E 30°31&apos;24&quot;</div>
         <div className="absolute bottom-6 left-6 text-white/30 text-xs font-mono">GRID 38TUL8891307610</div>
 
         {/* Animated tactical elements */}
