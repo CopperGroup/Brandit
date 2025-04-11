@@ -5,31 +5,32 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { RefreshCw, Heart, ShoppingBag } from "lucide-react"
 import { Store } from "@/constants/store"
+import Image from "next/image"
 
 const categories = {
   tops: [
-    { name: "Польова Сорочка", image: "/placeholder.svg?height=300&width=300&text=Field Shirt", price: "2900 ₴" },
-    { name: "Базова Футболка", image: "/placeholder.svg?height=300&width=300&text=Basic Tee", price: "1950 ₴" },
-    { name: "Тактичний Светр", image: "/placeholder.svg?height=300&width=300&text=Tactical Sweater", price: "3450 ₴" },
+    { name: "Польова Сорочка", image: "/assets/o-fs.jpg", price: "2900 ₴" },
+    { name: "Базова Футболка", image: "/assets/o-bt.jpg", price: "1950 ₴" },
+    { name: "Тактичний Светр", image: "/assets/o-ts.jpg", price: "3450 ₴" },
   ],
   bottoms: [
-    { name: "Карго Штани", image: "/placeholder.svg?height=300&width=300&text=Cargo Pants", price: "5300 ₴" },
-    { name: "Тактичні Джинси", image: "/placeholder.svg?height=300&width=300&text=Tactical Jeans", price: "4800 ₴" },
-    { name: "Міські Шорти", image: "/placeholder.svg?height=300&width=300&text=Urban Shorts", price: "3200 ₴" },
+    { name: "Карго Штани", image: "/assets/o-cp.jpg", price: "5300 ₴" },
+    { name: "Тактичні Джинси", image: "/assets/o-tj.jpg", price: "4800 ₴" },
+    { name: "Міські Шорти", image: "/assets/o-us.jpg", price: "3200 ₴" },
   ],
   outerwear: [
-    { name: "Куртка Авіатор", image: "/placeholder.svg?height=300&width=300&text=Aviator Jacket", price: "7450 ₴" },
-    { name: "Парка Міська", image: "/placeholder.svg?height=300&width=300&text=Urban Parka", price: "8950 ₴" },
-    { name: "Польовий Жилет", image: "/placeholder.svg?height=300&width=300&text=Field Vest", price: "5600 ₴" },
+    { name: "Куртка Авіатор", image: "/assets/o-aj.jpg", price: "7450 ₴" },
+    { name: "Парка Міська", image: "/assets/o-cpa.jpg", price: "8950 ₴" },
+    { name: "Польовий Жилет", image: "/assets/o-tv.jpg", price: "5600 ₴" },
   ],
   accessories: [
     {
       name: "Тактичний Рюкзак",
-      image: "/placeholder.svg?height=300&width=300&text=Tactical Backpack",
+      image: "/assets/o-tb.jpg",
       price: "4200 ₴",
     },
-    { name: "Шапка Дозорна", image: "/placeholder.svg?height=300&width=300&text=Watch Cap", price: "1350 ₴" },
-    { name: "Військовий Ремінь", image: "/placeholder.svg?height=300&width=300&text=Military Belt", price: "2100 ₴" },
+    { name: "Шапка Дозорна", image: "/assets/o-wc.jpg", price: "1350 ₴" },
+    { name: "Військовий Ремінь", image: "/assets/o-mb.jpg", price: "2100 ₴" },
   ],
 }
 
@@ -215,9 +216,10 @@ export default function OutfitBuilder() {
                   <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-olive-700/30 z-20 pointer-events-none"></div>
                   <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-olive-700/30 z-20 pointer-events-none"></div>
 
-                  <img
-                    src="/placeholder.svg?height=800&width=600&text=Current Outfit"
+                  <Image
+                    src="/assets/o-main.jpg"
                     alt="Current outfit"
+                    fill
                     className="w-full h-full object-cover"
                   />
 
@@ -263,9 +265,10 @@ export default function OutfitBuilder() {
                           <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-olive-700/30 z-10 pointer-events-none"></div>
                           <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-olive-700/30 z-10 pointer-events-none"></div>
 
-                          <img
+                          <Image
                             src={item.image || "/placeholder.svg"}
                             alt={item.name}
+                            fill
                             className="w-full h-full object-cover"
                           />
                         </div>

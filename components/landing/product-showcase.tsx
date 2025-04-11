@@ -202,7 +202,7 @@ export default function ProductShowcase() {
                   {/* Image with enhanced hover effect */}
                   <div className="absolute inset-0 bg-stone-800">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/assets/1fp.jpg"
                       alt="Аметистовий блейзер - Модель у сірому блейзері з фіолетовою сорочкою"
                       fill
                       className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:brightness-110"
@@ -276,7 +276,7 @@ export default function ProductShowcase() {
                   {/* Image with enhanced hover effect */}
                   <div className="absolute inset-0 bg-stone-800">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/assets/2fp.jpg"
                       alt="Бежевий блейзер - Модель у бежевому блейзері з білою сорочкою"
                       fill
                       className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:brightness-110"
@@ -352,7 +352,7 @@ export default function ProductShowcase() {
                   {/* Image with enhanced hover effect */}
                   <div className="absolute inset-0 bg-stone-800">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/assets/3fp.jpg"
                       alt="Чорний блейзер - Модель у чорному блейзері з білою сорочкою"
                       fill
                       className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:brightness-110"
