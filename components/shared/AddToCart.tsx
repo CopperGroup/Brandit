@@ -9,6 +9,7 @@ import { productAddedToCart } from "@/lib/actions/product.actions"
 import { ShoppingBag, ShoppingCart } from "lucide-react"
 import { trackFacebookEvent } from "@/helpers/pixel"
 import { motion } from "framer-motion"
+import { cn } from "@/lib/utils"
 
 export type AddToCartVariant =
   | "default" // Standard button with text
@@ -155,7 +156,7 @@ const AddToCart = ({
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className={`flex-1 bg-olive-700 hover:bg-olive-600 text-white py-2.5 font-belleza tracking-wider text-sm flex items-center justify-center gap-2 transition-colors ${className}`}
+          className={cn(`flex-1 bg-olive-700 hover:bg-olive-600 text-white py-2.5 font-belleza tracking-wider text-sm flex items-center justify-center gap-2 transition-colors` + className)}
           onClick={AddDataToCart}
           disabled={isAdding}
         >

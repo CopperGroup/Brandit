@@ -7,35 +7,47 @@ import Link from "next/link"
 import CartSidebar from "./cart-sidebar"
 import { useAppContext } from "@/app/(root)/context"
 import { Store } from "@/constants/store"
+import { signIn, signOut, useSession } from "next-auth/react"
 
 // Replace the existing menuItems array with the one provided by the user
-const menuItems = [
-  { name: "ГОЛОВНА", href: "/" },
-  { name: "КАТАЛОГ", href: "/catalog?page=1&sort=default" },
-  { name: "УПОДОБАНІ", href: "/liked", requiresAuth: true },
-  { name: "МОЇ ЗАМОВЛЕННЯ", href: "/myOrders", requiresAuth: true },
-  { name: "КОНТАКТИ", href: "/contact-us" },
-  { name: "ДОСТАВКА", href: "/delivery" },
-  { name: "ГАРАНТІЯ ТА СЕРВІСИ", href: "/warranty" },
-  { name: "РОЗМІРИ", href: "/size-guide" },
-  { name: "НАША ІСТОРІЯ", href: "/our-history" },
-]
 
 // Remove the collections array as it's not needed anymore
 
 // Update the Header component to include the isAuthenticated state
-export default function Header() {
+export default function Header({ currentUserId, role }: { currentUserId: string, role: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [mounted, setMounted] = useState(false)
   // This is a mock state - in a real app, you would get this from your auth context/provider
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isCartOpen, setIsCartOpen] = useState(false)
-
+  
   const { cartData } = useAppContext()
+
+  const menuItems = [
+    { name: "ГОЛОВНА", href: "/" },
+    { name: "КАТАЛОГ", href: "/catalog?page=1&sort=default" },
+    { name: "УПОДОБАНІ", href: `/liked/${currentUserId}`, requiresAuth: true },
+    { name: "МОЇ ЗАМОВЛЕННЯ", href: `/myOrders/user/${currentUserId}`, requiresAuth: true },
+    { name: "КОНТАКТИ", href: "/contact-us" },
+    { name: "ДОСТАВКА", href: "/delivery" },
+    { name: "ГАРАНТІЯ ТА СЕРВІСИ", href: "/warranty" },
+    { name: "РОЗМІРИ", href: "/size-guide" },
+    { name: "НАША ІСТОРІЯ", href: "/our-history" },
+  ]
 
   // Calculate the total number of items in cart
   const cartItemCount = cartData ? cartData.reduce((total: number, item: any) => total + item.quantity, 0) : 0
+
+  const { status } = useSession();
+
+  useEffect(() => {
+    if(status === "authenticated") {
+      setIsAuthenticated(true)
+    } else {
+      setIsAuthenticated(false)
+    }
+  }, [status])
 
   // Handle component mount to prevent hydration issues
   useEffect(() => {
@@ -75,6 +87,13 @@ export default function Header() {
     }
   }, [isMenuOpen, mounted])
 
+  const handleAuth = () => {
+    if(status === "authenticated") {
+      signOut();
+    } else {
+      signIn();
+    }
+  }
   // Don't render anything until client-side
   if (!mounted) {
     return (
@@ -202,8 +221,36 @@ export default function Header() {
               {/* Menu Items - Enhanced */}
               <nav className="flex-1 pr-2 overflow-y-auto max-h-[calc(100vh-250px)] scrollbar-military">
                 <ul className="space-y-1">
+                  {["Admin", "Owner"].includes(role) && role && (
+                    <motion.li
+                      key="Admin"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 }}
+                    >
+                      <Link
+                        href="/admin"
+                        className="flex items-center justify-between py-4 px-5 text-white/80 hover:text-white hover:bg-white/5 rounded-sm transition-all duration-300 group relative overflow-hidden"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <motion.span className="absolute left-0 top-0 bottom-0 w-[2px] bg-olive-700/50 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
+
+                        <span className="font-belleza tracking-wide relative">
+                          АДМІН
+                          <motion.span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-olive-700/40 group-hover:w-full transition-all duration-500" />
+                        </span>
+
+                        <motion.div
+                          whileHover={{ x: 5 }}
+                          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        >
+                          <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </motion.div>
+                      </Link>
+                    </motion.li>
+                  )}
+
                   {menuItems.map((item, index) => {
-                    // Skip auth-required items if not authenticated
                     if (item.requiresAuth && !isAuthenticated) return null
 
                     return (
@@ -211,7 +258,7 @@ export default function Header() {
                         key={item.name}
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 + index * 0.05 }}
+                        transition={{ delay: 0.1 + (index + (["Admin", "Owner"].includes(role) && role  ? 1 : 0)) * 0.05 }}
                       >
                         <Link
                           href={item.href}
@@ -251,7 +298,8 @@ export default function Header() {
                   <button
                     className="flex items-center text-white/70 hover:text-white transition-colors group"
                     onClick={() => {
-                      setIsAuthenticated(!isAuthenticated) // Toggle auth state for demo
+                      setIsAuthenticated(!isAuthenticated);
+                      handleAuth();
                       setIsMenuOpen(false)
                     }}
                   >

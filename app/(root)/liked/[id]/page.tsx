@@ -11,43 +11,43 @@ import { Store } from "@/constants/store"
 
 // Mock data for liked products
 const mockLikedProducts = [
-  {
-    id: "tactical-field-jacket-m1",
-    name: "ТАКТИЧНА ПОЛЬОВА КУРТКА M1",
-    category: "Верхній одяг",
-    image: "/placeholder.svg?height=800&width=600&text=Tactical+Jacket",
-    price: 4470,
-    priceWithoutDiscount: 5970,
-    discount: 25,
-  },
-  {
-    id: "military-cargo-pants",
-    name: "ТАКТИЧНІ КАРГО ШТАНИ",
-    category: "Штани",
-    image: "/placeholder.svg?height=800&width=600&text=Cargo+Pants",
-    price: 2870,
-    priceWithoutDiscount: 2870,
-    discount: 0,
-  },
-  {
-    id: "tactical-combat-boots",
-    name: "ТАКТИЧНІ БОЙОВІ ЧЕРЕВИКИ",
-    category: "Взуття",
-    image: "/placeholder.svg?height=800&width=600&text=Combat+Boots",
-    price: 3970,
-    priceWithoutDiscount: 4970,
-    discount: 20,
-  },
-  {
-    id: "military-field-cap",
-    name: "ВІЙСЬКОВА ПОЛЬОВА КЕПКА",
-    category: "Головні убори",
-    image: "/placeholder.svg?height=800&width=600&text=Field+Cap",
-    price: 1270,
-    priceWithoutDiscount: 1570,
-    discount: 19,
-  },
-]
+  // {
+  //   id: "tactical-field-jacket-m1",
+  //   name: "ТАКТИЧНА ПОЛЬОВА КУРТКА M1",
+  //   category: "Верхній одяг",
+  //   image: "/placeholder.svg?height=800&width=600&text=Tactical+Jacket",
+  //   price: 4470,
+  //   priceWithoutDiscount: 5970,
+  //   discount: 25,
+  // },
+  // {
+  //   id: "military-cargo-pants",
+  //   name: "ТАКТИЧНІ КАРГО ШТАНИ",
+  //   category: "Штани",
+  //   image: "/placeholder.svg?height=800&width=600&text=Cargo+Pants",
+  //   price: 2870,
+  //   priceWithoutDiscount: 2870,
+  //   discount: 0,
+  // },
+  // {
+  //   id: "tactical-combat-boots",
+  //   name: "ТАКТИЧНІ БОЙОВІ ЧЕРЕВИКИ",
+  //   category: "Взуття",
+  //   image: "/placeholder.svg?height=800&width=600&text=Combat+Boots",
+  //   price: 3970,
+  //   priceWithoutDiscount: 4970,
+  //   discount: 20,
+  // },
+  // {
+  //   id: "military-field-cap",
+  //   name: "ВІЙСЬКОВА ПОЛЬОВА КЕПКА",
+  //   category: "Головні убори",
+  //   image: "/placeholder.svg?height=800&width=600&text=Field+Cap",
+  //   price: 1270,
+  //   priceWithoutDiscount: 1570,
+  //   discount: 19,
+  // },
+] as any
 
 export default function LikedProductsPage() {
   const [likedProducts, setLikedProducts] = useState(mockLikedProducts)
@@ -254,7 +254,7 @@ export default function LikedProductsPage() {
                           price={product.price}
                           priceWithoutDiscount={product.priceWithoutDiscount || product.price}
                           variant="quick-add"
-                          className="bg-white/90 backdrop-blur-sm hover:bg-white text-stone-900 border-0 rounded-none font-belleza py-2 px-4 text-xs tracking-wider transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-full"
+                          className=" border-0 rounded-none font-belleza py-2 px-4 text-xs tracking-wider transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-full bg-white/90 backdrop-blur-sm hover:bg-white text-stone-900"
                         />
                       </div>
                     </motion.div>
