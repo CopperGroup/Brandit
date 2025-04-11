@@ -16,7 +16,7 @@ const collections = [
   {
     title: "ПОВСЯКДЕННА УНІФОРМА",
     description: "Військово-натхненні базові речі для щоденного носіння",
-    image: "/assets/1c.jfif",
+    image: "/assets/1c.webp",
     color: "bg-stone-800",
   },
   {

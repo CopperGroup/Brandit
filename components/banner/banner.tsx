@@ -6,7 +6,6 @@ import { ArrowRight } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import CustomCursor from "../landing/custom-cursor"
 import Link from "next/link"
-import Image from "next/image"
 
 export default function Banner() {
   const containerRef = useRef<HTMLDivElement>(null)
