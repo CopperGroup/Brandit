@@ -127,7 +127,7 @@ export default function Banner() {
             <div className="absolute -top-3 -left-3 w-8 h-8 border-t border-l border-olive-500/40"></div>
             <div className="absolute -bottom-3 -right-3 w-8 h-8 border-b border-r border-olive-500/40"></div>
 
-            {/* <Link href="/catalog/?page=1&sort=default">
+            <Link href="/catalog/?page=1&sort=default">
               <Button className="shop-button group bg-transparent border border-white/40 text-white hover:border-white rounded-none px-10 py-5 font-belleza tracking-widest overflow-hidden relative">
                 <span className="relative z-10">КАТАЛОГ</span>
                 <motion.span
@@ -139,7 +139,7 @@ export default function Banner() {
                 </motion.span>
                 <span className="absolute inset-0 bg-gradient-to-r from-olive-800/80 to-olive-700/80 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out" />
               </Button>
-            </Link> */}
+            </Link>
           </motion.div>
 
           {/* Animated decorative elements around content */}
